@@ -2,7 +2,7 @@ local CollectionService = game:GetService("CollectionService")
 
 local Spawn = require(script.Parent.Spawn)
 
-return function(Tag: string, Start: ((Instance) -> nil) | ((Instance) -> () -> nil))
+return function(Tag: string, Start: (Instance: Instance) -> () & (Instance: Instance) -> (() -> ())?)
 	local InstanceMap = {}
 
 	for _, Instance in CollectionService:GetTagged(Tag) do
